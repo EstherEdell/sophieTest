@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .clickMe {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container"> -->
+        
+        <map name="map_test">
+            <area shape="rect" coords="50,44,270,350" href="#" alt="" class="clickMe">
+        </map>
+        <img src="assets/bear.jpg" alt="" usemap="#map_test">
+    <!-- </div> -->
+
+    <!-- <img src="assets/bear.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    </map> -->
+    
+</body>
+<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+    $(function () {
+        $('.clickMe').on('click', function(){
+            alert('I"VE BEEN CLICKED');
+        })
+        // $('img[usemap]').rwdImageMaps();
+         console.log("ready!");
+    });
+</script>
+</html>
